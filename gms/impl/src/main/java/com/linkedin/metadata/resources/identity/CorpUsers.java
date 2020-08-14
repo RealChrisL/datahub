@@ -144,7 +144,7 @@ public final class CorpUsers extends BaseSearchableEntityResource<
       @QueryParam(PARAM_ASPECTS) @Optional("[]") @Nonnull String[] aspectNames,
       @QueryParam(PARAM_FILTER) @Optional @Nullable Filter filter,
       @QueryParam(PARAM_SORT) @Optional @Nullable SortCriterion sortCriterion) {
-    throw new UnsupportedOperationException("new commit is not supported");
+    return super.getAll(pagingContext, aspectNames, filter, sortCriterion);
   }
 
   @Finder(FINDER_SEARCH)
